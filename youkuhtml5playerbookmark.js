@@ -21,11 +21,11 @@
 	var videoCss = [
 		'',
 		'position:absolute',
-		'width:1600px',
-		'height:900px',
-		'top:-500px',
+		'width:1000px',
+		'height:625px',
+		'top:100px',
 		'left:50%',
-		'margin-left:-306px',
+		'margin-left:-490px',
 		'border:1px solid #999',
 		'z-index:1000000000000',
 		'background:#000',
@@ -104,8 +104,8 @@
 		cover.style.cssText += coverCss.join(';');
 
 		var v = document.createElement('video');
-		v.setAttribute('height','900');
-		v.setAttribute('width','1600');
+		v.setAttribute('height','625');
+		v.setAttribute('width','1000');
 		v.setAttribute('controls','true');
 		v.style.cssText += videoCss.join(';');
 		v.src = m3u8Src;
@@ -113,7 +113,7 @@
 		
 		var a = document.createElement('a');		
 		a.setAttribute('href',mp4Src);
-		a.innerHTML = '不能直接观看，点击这里：'+mp4Src;
+		a.innerHTML = '不能观看，点击这里：'+mp4Src;
 		a.style.cssText += aCss.join(';');
 		cover.appendChild(a);
 		
@@ -175,8 +175,8 @@
 				
 				v.addEventListener('canplay',v.play);
 				setTimeout(function(){
-					cover.style.backgroundColor = 'rgba(255,255,255,0.6)';
-					v.style.top = '-1px';
+					cover.style.backgroundColor = 'rgba(230,230,230,0.8)';
+					v.style.top = '100px';
 				},100);
 			},
 			remove : function(){
